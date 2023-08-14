@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Will Translator</title>
+  <link rel="stylesheet" href="styles.css">
+  <link rel="icon" type="image/png" href="https://i.imgur.com/GTcFzgb.png">
+</head>
+<body>
+  <div class="container">
+    <h1>Will Translator<span class="betabox">Beta</span></h1>
+
+    <div class="language-label bold" id="language-label-input">Italiano</div>
+    <label for="translation-input"></label><br>
+    <textarea id="translation-input" class="textarea" placeholder="Cosa vuoi tradurre oggi?"></textarea>
+    <br>
+
+    <button id="translate-button">Traduci</button><br>
+
+    <div class="language-label" id="language-label-output">Inglese</div>
+    <label for="translation-output"></label><br>
+    <textarea id="translation-output" class="textarea" placeholder="Traduzione" readonly></textarea>
+
+    <button id="copy-button">Copia la traduzione</button>
+    <p class="copy-success">Testo tradotto copiato!</p>
+  </div>
+  <div class="disclaimer">
+    Il modello è attualmente in fase di test e potrebbe fornire informazioni errate, al momento supporta solo l'italiano. Versione 1.8 | 14/08/23
+  </div>
+  <script src="script.js" defer></script>
+</body>
+</html>
