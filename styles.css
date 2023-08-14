@@ -102,3 +102,13 @@ h1 {
     max-width: 100%;
   }
 }
+
+#translate-button,
+#copy-button {
+		transition: transform 0.3s ease-in-out;
+}
+
+#translate-button:hover,
+#copy-button:hover {
+		transform: scale(1.01);
+}
