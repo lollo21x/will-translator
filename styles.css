@@ -55,7 +55,7 @@ h1 {
   background-color: #7cd47a;
   color: #000;
   padding: 5px 10px;
-  border-radius: 4px;
+  border-radius: 8px;
   font-size: 12px;
   vertical-align: middle;
   margin-left: 10px;
@@ -112,3 +112,13 @@ h1 {
 #copy-button:hover {
 		transform: scale(1.01);
 }
+
+#translate-button:disabled {
+    background-color: #ccc; /* Colore grigio per il pulsante disabilitato */
+    cursor: not-allowed; /* Mostra il simbolo di divieto */
+    transform: none; /* Rimuove l'effetto hover */
+  }
+  
+  #translate-button:disabled:hover {
+    transform: none; /* Nessuna trasformazione su hover */
+  }  
