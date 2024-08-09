@@ -20,11 +20,16 @@
     <label for="translation-output"></label><br>
     <textarea id="translation-output" class="textarea" placeholder="Translation" readonly></textarea>
 
-    <button id="copy-button">Copy to clipboard</button>
+    <button id="copy-button" disabled>Copy to clipboard</button>
     <p class="copy-success">Translated text copied</p>
+
+    <div class="timeout-popup" id="timeout-popup">
+      <h2>The translation takes longer than expected.</h2>
+      <button id="reload-button">Reload page</button>
+    </div>
   </div>
   <div class="disclaimer">
-    The model may provide incorrect information, it currently only supports translation from Italian to English. Versione 2.1 | 08/08/24
+    The model may provide incorrect information, it currently only supports translation from Italian to English. Versione 2.2 | 09/08/24
   </div>
   <script src="script.js" defer></script>
 </body>
