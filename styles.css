@@ -85,7 +85,7 @@ h1 {
   background-color: #7cd47a;
   color: #000;
   padding: 5px;
-  border-radius: 10px;
+  border-radius: 8px;
   font-family: "Montserrat", Arial, sans-serif;
   font-weight: normal;
   font-size: 14px;
@@ -105,20 +105,68 @@ h1 {
 
 #translate-button,
 #copy-button {
-		transition: transform 0.3s ease-in-out;
+    transition: transform 0.3s ease-in-out;
 }
 
 #translate-button:hover,
 #copy-button:hover {
-		transform: scale(1.01);
+    transform: scale(1.01); /* Zoom normale per altri pulsanti */
 }
 
 #translate-button:disabled {
     background-color: #ccc; /* Colore grigio per il pulsante disabilitato */
     cursor: not-allowed; /* Mostra il simbolo di divieto */
     transform: none; /* Rimuove l'effetto hover */
-  }
-  
-  #translate-button:disabled:hover {
+}
+
+#copy-button:disabled {
+  background-color: #ccc; /* Colore grigio per il pulsante disabilitato */
+  cursor: not-allowed; /* Mostra il simbolo di divieto */
+  transform: none; /* Rimuove l'effetto hover */
+}
+
+#translate-button:disabled:hover {
     transform: none; /* Nessuna trasformazione su hover */
-  }  
+}
+
+/* Stile per il popup di timeout */
+.timeout-popup {
+  display: none;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 300px;
+  padding: 20px;
+  background-color: #fff;
+  border: 1px solid #ccc;
+  border-radius: 10px;
+  text-align: center;
+  z-index: 1000; /* Assicura che il popup sia sopra gli altri elementi */
+}
+
+.timeout-popup h2 {
+  font-size: 16px;
+  margin-bottom: 10px;
+  font-family: "Montserrat", Arial, sans-serif;
+}
+
+.timeout-popup button {
+  padding: 10px 20px;
+  background-color: #7cd47a;
+  color: #000;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  font-family: "Montserrat", Arial, sans-serif;
+  font-weight: bold;
+  transition: transform 0.3s ease; /* Solo zoom al passaggio del mouse */
+}
+
+.timeout-popup button:hover {
+  transform: scale(1.04); /* Leggermente ridotto lo zoom per il pulsante del popup */
+}
+
+.timeout-popup button:focus {
+  outline: none;
+}
